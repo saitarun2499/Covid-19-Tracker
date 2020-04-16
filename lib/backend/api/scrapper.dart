@@ -51,7 +51,7 @@ class Scrapper {
     final document = parse(response.body);
     List<Map<String, dynamic>> items = [];
     final a = document.outerHtml
-        .split(","liveBlogUpdate": ")[1]
+        .split(',"liveBlogUpdate": ')[1]
         .split("}</script><script")[0];
     final datas = json.decode(a);
     datas.forEach((data) {
